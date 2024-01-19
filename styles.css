@@ -1,2 +1,26 @@
+/* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-/* Your CSS Code here. */
+/* Apply styles to the holder class */
+.holder {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Apply styles to the item class */
+.item {
+    flex: 0 0 calc(33.33% - 10px); /* Adjust the width as needed, considering the space between items */
+    margin-bottom: 10px; /* Add margin to create space between items */
+}
+
+/* Media query to handle responsiveness */
+@media (max-width: 768px) {
+    .item {
+        flex: 0 0 calc(50% - 10px); /* Adjust the width for smaller screens */
+    }
+}
